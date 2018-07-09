@@ -21,6 +21,16 @@ namespace Mapcache_Editor.ApplicationConfiguration {
 			set { _configAsker = value; }
 		}
 
+		public static string AppLastPath {
+			get { return ConfigAsker["[Mapcache - Application latest file name]", Configuration.ApplicationPath]; }
+			set { ConfigAsker["[Mapcache - Application latest file name]"] = value; }
+		}
+
+		public static string MapCachePath {
+			get { return ConfigAsker["[Mapcache - MapCachePath]", Configuration.ApplicationPath]; }
+			set { ConfigAsker["[Mapcache - MapCachePath]"] = value; }
+		}
+		
 		#region Program's configuration and information
 
 		public static string PublicVersion {
